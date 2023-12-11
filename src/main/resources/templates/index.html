@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Role Management</title>
+</head>
+<body>
+<h2>User Role Management</h2>
+
+<!-- Form for adding, updating, and deleting user roles -->
+<form id="userForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="userId">User ID:</label>
+    <input type="text" id="userId" name="userId" required>
+
+    <label for="role">Role:</label>
+    <input type="text" id="role" name="role" required>
+
+    <label for="pillar">Pillar:</label>
+    <input type="text" id="pillar" name="pillar" required>
+
+    <label for="validUntil">Valid Until:</label>
+    <input type="date" id="validUntil" name="validUntil" required>
+
+    <!-- Buttons for Add, Update, and Delete operations -->
+    <button type="button" onclick="addUserRole()">Add User Role</button>
+    <button type="button" onclick="updateUserRole()">Update User Role</button>
+    <button type="button" onclick="deleteUserRole()">Delete User Role</button>
+</form>
+
+<!-- Display user roles here -->
+<div id="userRoles"></div>
+
+<!-- Scripts -->
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
